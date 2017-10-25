@@ -19,6 +19,5 @@ BSD
 
 Author Information
 ------------------
-
-Jordi Molina - jordi@teradisk.com
+Aaron Serrano Martin
 
