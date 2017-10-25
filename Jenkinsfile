@@ -37,6 +37,7 @@ node {
          env.NODE_ENV = "test"
 
          print "Environment will be : ${env.NODE_ENV}"
+         sh 'sudo kitchen destroy'
          sh 'sudo kitchen test'
          sh 'sudo rm -rf .kitchen'
 
@@ -57,7 +58,7 @@ node {
             from: 'jenkins@teradisk.com',
             subject: 'project build failed',
             to: 'cicd@teradisk.com'
-
+	sh 'sudo kitchen destroy'
         throw err
     }
 
